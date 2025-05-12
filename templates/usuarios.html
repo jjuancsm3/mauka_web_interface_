@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios Registrados</title>
+</head>
+<body>
+    <h2>Usuarios Registrados en Firebase</h2>
+    <ul>
+        {% for user in users %}
+        <li>{{ user.email }} {% if user.display_name %} - {{ user.display_name }}{% endif %}</li>
+        {% endfor %}
+    </ul>
+    <a href="/panel">Volver al panel</a>
+</body>
+</html>
